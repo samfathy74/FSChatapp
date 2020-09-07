@@ -1,0 +1,516 @@
+﻿body {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    background-image: url("../icon/loadingg.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#form1 {
+    display: none;
+}
+
+::selection {
+    background: #ede49e;
+    color: white;
+}
+
+::-moz-selection {
+    color: white;
+    background: #300D4F;
+}
+
+
+.header {
+    font-family: Verdana;
+    font-size: 40px;
+    color: white;
+    padding-top: 11px;
+    margin: 0;
+    height: 80px;
+    display: table;
+    /*margin-left: -50px;*/
+    font-style: normal;
+}
+
+    .header:hover {
+        font-style: italic;
+    }
+/*to edit color of background navbar(headbar)*/
+.navbar-default {
+    background-color: #300D4F;
+    border-radius: 15px;
+    border: solid;
+    border-color: white;
+}
+    /*to edit color of text navbar(headbar)*/
+    .navbar-default .navbar-nav > li > a {
+        color: #fff;
+    }
+        /*to edit color of text when click navbar(headbar)*/
+        .navbar-default .navbar-nav > li > a:hover {
+            color: #fff395;
+            text-shadow: 0 0 20px white;
+        }
+/*to edit in navbar(headbar)*/
+.nav > li {
+    padding-top: 12px;
+    position: relative;
+    display: block;
+}
+
+footer {
+    width: 100%;
+    margin-top: auto;
+    font-weight: bold;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: large;
+    color: white;
+    text-align: center;
+    background-color: #300D4F;
+    padding: 0.8em;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+/* Media qurey section */
+
+
+/* Only affects 1200px width */
+@media only screen and (max-width: 1200px) {
+    .MainChatListClass {
+        width: 230px !important;
+    }
+}
+
+/* Only affects 755px width */
+@media only screen and (max-width: 755px) {
+    .MainChatListClass {
+        width: 250px !important;
+    }
+}
+
+/* Only affects 660px width */
+@media only screen and  (max-width: 660px) {
+    .MainChatListClass {
+        width: 165px !important;
+    }
+}
+
+/* Only affects 460px width */
+@media only screen and (min-width:401px) and (max-width: 460px) {
+    .MainChatListClass {
+        width: 140px !important;
+    }
+}
+/* Only affects 400px width */
+@media only screen and (max-width: 400px) {
+    .MainChatListClass {
+        width: 106px !important;
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width:290px) {
+    .signip_form input {
+        /*margin: 0px !important;*/
+        width: 230px !important;
+        margin-left: -10px;
+    }
+
+    .login_form input {
+        padding: 0px !important;
+        margin: 0px !important;
+        width: 200px !important;
+    }
+
+    .buttons-panel {
+        display: block !important;
+    }
+
+}
+
+@media screen and (min-width:290px) and (max-width:400px) {
+    .signip_form input {
+        margin-left: -10px !important;
+        width: 265px !important;
+    }
+
+    .buttons-panel {
+        display: block !important;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+
+    .header {
+        display: table;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .login_img {
+        width: 150px !important;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    .login_form {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .signup_img {
+        width: 150px !important;
+        padding: 0px !important;
+        margin: 0px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .header {
+        display: table !important;
+        /*margin-left: 20px !important;*/
+    }
+
+    .profile-pic {
+        margin: 0px !important;
+        padding: 0px !important;
+        margin-left: 20px !important;
+    }
+}
+
+/*Scroll bar*/
+/*This cause the division content to be displayed from right to left */
+.Flipped {
+    direction: rtl;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gray;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+/*==============================Login page==============================================*/
+.login_img {
+    width: 300px;
+}
+
+.login_form {
+    padding: 70px;
+}
+
+/*==============================signup page==============================================*/
+.PreviewImg {
+    display: none;
+}
+
+input[type=file] {
+    display: initial !important;
+    outline: none !important;
+}
+
+input[type=text],input[type=email],input[type=password],input[type=number]{
+padding:15px !important
+}
+
+
+.signup_img {
+    width: 350px;
+    margin-top: 20px;
+    text-align: center;
+    text-align-last: center;
+}
+
+.change-font {
+    font-family: Arial !important;
+}
+
+.signip_form input {
+    outline: none !important;
+}
+
+/*=============================Chat page===============================================*/
+.side {
+    background-color: #383737;
+    /*min-height:600px;*/
+    height: auto;
+    width: 100%; /*update*/
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    color: white;
+    border: #e8c851 solid 4px;
+}
+
+.main {
+    max-height: 700px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #383737;
+    border: #e8c851 solid 4px;
+    display: block;
+}
+
+.main, .staybottom, .msgChat, .title {
+    direction: ltr !important;
+}
+
+.main-content {
+    overflow-y: auto;
+    direction: rtl;
+    min-height: 400px;
+}
+
+.control-group {
+    display: flex !important;
+}
+
+.btnsend {
+    font-size: medium;
+    border-radius: 0px 20px 20px 0px;
+    color: white;
+    outline: none !important;
+}
+
+.staybottom {
+    /*margin-top:440px;
+      max-height: 100px;*/
+}
+
+.title {
+    color: #000000;
+    text-shadow: 0px 0px 4px #00e7ff;
+    background-color: #1a1818;
+    font-size: x-large;
+    font-family: fantasy;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
+
+.txtbox {
+    outline: none !important;
+    border-radius: 20px 0px 0px 20px;
+    background-color: black;
+    border-color: #e8c851;
+    font-family: auto;
+    font-size: Medium;
+    height: 45px;
+    width: 100%;
+    color: white;
+}
+
+.UsenameMsg {
+    border-radius: 30px;
+    background-color: #a5996f;
+    color: black;
+    font-size: 15px;
+    margin-top: -10px;
+    float: left;
+    padding: 5px 15px;
+    text-shadow: white 1px 1px 0px;
+}
+
+.Pic {
+    bottom: -6px;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.MessageCount {
+    font-size: Medium;
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+    width: 30px;
+}
+
+.notify {
+    height: 13px;
+    width: 112px;
+}
+
+.pp {
+}
+
+.Date-Css {
+    color: white;
+    float: right;
+    /* background-color: #154844; */
+    margin: 5px;
+    /* padding: 5px; */
+    font-variant: diagonal-fractions;
+    display: block;
+    margin-top: 0px;
+    font-variant-caps: all-small-caps;
+}
+
+.SenderClass {
+    left: 70%;
+    background: #00b9a9;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+
+.ReceiverClass {
+    right: 65%;
+    background: #006158;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+
+.MainChatListClass {
+    width: 280px;
+    position: relative;
+    border-radius: 0px 15px 0px 15px;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding: 13px;
+    text-align: center;
+    text-align: -webkit-center;
+    display: grid;
+}
+
+.OnlinePanel {
+    color: green;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.OfflinePanel {
+    color: #565656;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.NotifyPanel {
+    color: #ff5a4e;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.CountOnline {
+    background-color: #038137;
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 5px;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    float: left;
+    font-family: monospace;
+}
+
+.CountOffline {
+    background-color: #565656;
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 5px;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    float: left;
+    font-family: monospace;
+}
+
+.CountNotify {
+    background-color: #ff5a4e;
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 5px;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    float: left;
+    font-family: monospace;
+}
+
+.SidePanel {
+    color: coral;
+    background-color: #000000;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.MsgPanel {
+    color: coral;
+    background-color: #000000;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+li.lblname {
+    padding: 25px 20px 0px 0px;
+    font-variant-caps: small-caps;
+    font-weight: bold;
+}

@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="_LayoutMain.master.cs" Inherits="_LayoutMain" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon" type="image/ico" href="icon/title.png" />
+    <link rel="icon" type="image/ico" href="icon/title.png" />
+    <link rel="apple-touch-icon" type="image/ico" href="icon/title.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="~/Style/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Style/CSSstyle.css" rel="stylesheet" />
+    <link href="Style/Oleo-font.css" rel="stylesheet" />
+    <link href="Style/buttons.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.12.4.min.js"></script>
+    <script src="scripts/JScript.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+<div id="loading"></div>
+   <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <%-- header --%>
+        <nav class="navbar navbar-default navbar-static-top" runat="server" id="main_header">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" id="btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="header">
+                        <p class="glyphicon glyphicon-home"></p>
+                        <span><strong>SF</strong>chat.  </span>
+                    </div>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><asp:LinkButton ID="linklogin" runat="server" PostBackUrl="~/Login.aspx">
+                         <i class="glyphicon glyphicon-log-in"></i>&nbsp;Log In</asp:LinkButton></li>
+
+                        <li><asp:LinkButton ID="linksignup" runat="server" PostBackUrl="~/Registration.aspx">
+                        <i class="glyphicon glyphicon-user"></i>&nbsp;Registration</asp:LinkButton></li>
+                      
+                        <li class="Pic"><asp:Image ID="ImageProfile" CssClass="profile-pic" runat="server" Visible="False" onContextMenu="return false;" draggable="false"/></li>
+
+                        <li class="lblname"><asp:Label ID="lbluser" runat="server" ForeColor="#FFFFCC" Font-Names="Century Gothic" Font-Size="Large"><i></i></asp:Label></li>
+
+                        <li><asp:LinkButton ID="linklogout" runat="server" Visible="False" OnClick="linklogout_Click">
+                           <i class="glyphicon glyphicon-log-out"></i>&nbsp;Log out </asp:LinkButton></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <footer runat="server" class="ContentFooter" id="ContentFooter">
+        <marquee scrollamount="2" behavior="alternate">&copy;<%: DateTime.Now.Year %> All CopyRight Saved By Salim</marquee>
+    </footer>
+</body>
+</html>
