@@ -6,8 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <br />
     <br />
-
-    <div style="text-align: center; text-align-last: center;">
+    <div class="container" style="text-align: center; text-align-last: center;">
         <div class="row">
             <div class="col-sm-12">
                 <asp:Login ID="Login1" runat="server" CssClass="btn btn-dark" Style="background-color: #009999; border-collapse: collapse; min-width: 40%; border-radius: 20px;" BackColor="#009999" Font-Names="Bahnschrift Light,Medium" Font-Size="Medium" ForeColor="#FFFFCC" Height="330px" InstructionText="this page is specific for only admins" LoginButtonType="Button" OnAuthenticate="Login1_Authenticate" PasswordLabelText="Password :" UserNameLabelText="User Name :" Width="470px" LoginButtonStyle-CssClass="btn btn-danger">
@@ -21,7 +20,6 @@
                 </asp:Login>
             </div>
         </div>
-
     </div>
     <br />
     <br />
@@ -29,6 +27,7 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server" Visible="false">
+    <div class="container">
     <asp:Panel ID="Panel1" runat="server" Visible="false" ScrollBars="Auto" Width="100%" Height="100%" Enabled="False" GroupingText="Users Data" CssClass="text-center">
         <asp:DetailsView runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Id" Height="600px" Width="100%" PagerStyle-ForeColor="Black" Font-Size="15px" CellPadding="2" CellSpacing="2" BackColor="Black" Font-Bold="True" Font-Names="Bahnschrift" DataSourceID="SqlDataSource1" HorizontalAlign="Center" BorderColor="#11545F" CssClass="btn-info" ForeColor="Crimson">
             <Fields>
@@ -74,7 +73,7 @@
         </asp:DetailsView>
 
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:messengerconnection %>" SelectCommand="SELECT * FROM [chat]"></asp:SqlDataSource>
-
     </asp:Panel>
+        </div>
 </asp:Content>
 
