@@ -5,42 +5,48 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server"></asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <audio id="audioId" src="Tone/mix.wav" style="display: none; visibility: hidden;"></audio>
+<%--<audio id="audioId" src="Tone/mix.wav" style="display: none; visibility: hidden;"></audio>--%>
     <script>
-        function PlayTone() {
-            var player = document.getElementById('audioId');
-            setTimeout(function () {
-                player.play();
-                setTimeout(function () {
-                    player.pause();
-                    player.currentTime = 0;
-                }, 5000);
-            }, 100);
-        }
+       // function PlayTone() {
+         //   var player = document.getElementById('audioId');
+           // setTimeout(function () {
+             //   player.play();
+               // setTimeout(function () {
+                 //   player.pause();
+                   // player.currentTime = 0;
+              //  }, 5000);
+           // }, 100);
+      //  }
 
-        function PauseTone() {
-            var pauser = document.getElementById('audioId');
-            pauser.pause();
-        }
+       // function PauseTone() {
+         //   var pauser = document.getElementById('audioId');
+          //  pauser.pause();
+      //  }
 
         $(document).ready(function () {
-            $(".online-content").slideToggle();
-            $(".notify-content").slideToggle();
-            $(".offline-content").slideToggle();
-            $(".main-body").slideToggle();
+            $(".online-content").slideUp();
+            $(".notify-content").slideUp();
+            $(".offline-content").slideUp();
+            $(".main-body").slideUp();
 
 
             $(".NotifyPanel").click(function () {
                 $(".notify-content").slideToggle();
+                $(".online-content").slideUp();
+                $(".offline-content").slideUp();
             });
             $(".OnlinePanel").click(function () {
                 $(".online-content").slideToggle();
+                $(".notify-content").slideUp();
+                $(".offline-content").slideUp();
             });
             $(".OfflinePanel").click(function () {
                 $(".offline-content").slideToggle();
+                $(".notify-content").slideUp();
+                $(".online-content").slideUp();
+
             });
         });
-
     </script>
 
     <div class="container">
