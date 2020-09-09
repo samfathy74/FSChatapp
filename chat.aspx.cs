@@ -66,12 +66,13 @@ public partial class chat : System.Web.UI.Page
                 int count = CheckNewMsg();
                 if (DataList4.Items.Count > 0)
                 {
-                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "Javascript", "javascript:PlayTone()", true);
+                   // ScriptManager.RegisterStartupScript(Page, Page.GetType(), "Javascript", "javascript:PlayTone()", true);
                     LoadChatList();
+                    txtboxMsg.Focus();
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "Javascript", "javascript:PauseTone()", true);
+                   // ScriptManager.RegisterStartupScript(Page, Page.GetType(), "Javascript", "javascript:PauseTone()", true);
                 }
 
             }
@@ -177,6 +178,10 @@ public partial class chat : System.Web.UI.Page
         DataList3.DataBind();
         DataList4.DataBind();
         LoadChatList();
+        
+        if(UserTitle.InnerText != LabelRecevier.Text)
+        {UserTitle.Style.Add("color", "white");}
+        else {UserTitle.Style.Add("color", "black");}
     }
 
 
